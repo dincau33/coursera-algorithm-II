@@ -1,6 +1,6 @@
-# Coursera Algorithm I
+# Coursera Algorithm II
 
-Coursera Algorithm II covers Graph, Tries, String data structures as well as associated algorithms
+Coursera Algorithm course provides an introduction to fundamental data types, algorithms, and data structures. Part II focuses on graph and string-processing algorithms.
 
 This repository contains:
 * The unit tests I used to validate whether my solution to the course assignments are correct or not. Be mindful it does not cover time and space complexity assessment but only correctness.
