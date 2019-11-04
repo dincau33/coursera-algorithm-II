@@ -17,7 +17,7 @@ class WordNetTest {
 
     @Test
     void createWordnetTiny() {
-        WordNet wordNet = createTestDataset("synsetsTiny.txt", "hypernymsTiny.txt");
+        WordNet wordNet = createTestDataset("tinySynsets.txt", "tinyHypernyms.txt");
         assertThat(wordNet.isNoun("1750s")).isTrue();
         assertThat(wordNet.isNoun("abc")).isFalse();
         assertThat(wordNet.isNoun("18-karat_gold")).isTrue();
