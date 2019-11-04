@@ -1,7 +1,5 @@
 package week1.assignment;
 
-import java.io.*;
-
 import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertThrows;
@@ -11,10 +9,10 @@ class WordNetTest {
 
     private static final String FILE_PATH_FOLDER = "./src/test/resources/week1/assignment/wordnet/";
 
-    private WordNet createTestDataset(String synsets, String hypernyms) {
-        synsets = FILE_PATH_FOLDER + synsets;
-        hypernyms = FILE_PATH_FOLDER + hypernyms;
-        return new WordNet(synsets, hypernyms);
+    private WordNet createTestDataset(String synsetsFileName, String hypernymsFileName) {
+        String synsetsFilePath = FILE_PATH_FOLDER + synsetsFileName;
+        String hypernymsFilePath = FILE_PATH_FOLDER + hypernymsFileName;
+        return new WordNet(synsetsFilePath, hypernymsFilePath);
     }
 
     @Test

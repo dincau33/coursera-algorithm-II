@@ -8,9 +8,3 @@
 7,1790s,the decade from 1790 to 1799
 8,18-karat_gold,an alloy that contains 75 per cent gold
 9,1820s,the decade from 1820 to 1829
-10,1830s,the decade from 1830 to 1839
-11,1840s,the decade from 1840 to 1849
-12,1850s,the decade from 1850 to 1859
-13,1860s,the decade from 1860 to 1869
-14,1870s,the decade from 1870 to 1879
-15,1900s,the decade from 1900 to 1909
