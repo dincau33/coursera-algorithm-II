@@ -36,7 +36,9 @@ public class WordNet {
     // distance between nounA and nounB (defined below)
     // Complexity: O(S + H) time
     public int distance(String nounA, String nounB) {
-        if (!isNoun(nounA) || !isNoun(nounB)) throw new IllegalArgumentException();
+        if (!isNoun(nounA) || !isNoun(nounB)) {
+            throw new IllegalArgumentException();
+        }
         int nounsIdA = idByNoun.get(nounA);
         int nounsIdB = idByNoun.get(nounB);
         return graph.length(nounsIdA, nounsIdB);
