@@ -11,7 +11,7 @@ public class WordNet {
 
     private Map<Integer, String> nounById;
     private Map<String, Integer> idByNoun;
-    private SAP hypernyms;
+    private SAP graph;
 
     // constructor takes the name of the two input files
     // Complexity: O((S + H) * log (S + H)) time | O(S + H) space
@@ -39,7 +39,7 @@ public class WordNet {
         if (!isNoun(nounA) || !isNoun(nounB)) throw new IllegalArgumentException();
         int nounsIdA = idByNoun.get(nounA);
         int nounsIdB = idByNoun.get(nounB);
-        return hypernyms.length(nounsIdA, nounsIdB);
+        return graph.length(nounsIdA, nounsIdB);
     }
 
     // a synset (second field of nounById.txt) that is the common ancestor of nounA and nounB
@@ -49,7 +49,7 @@ public class WordNet {
         if (!isNoun(nounA) || !isNoun(nounB)) throw new IllegalArgumentException();
         int nounsIdA = idByNoun.get(nounA);
         int nounsIdB = idByNoun.get(nounB);
-        int ancestor = hypernyms.ancestor(nounsIdA, nounsIdB);
+        int ancestor = graph.ancestor(nounsIdA, nounsIdB);
         return nounById.get(ancestor);
     }
 
@@ -77,7 +77,7 @@ public class WordNet {
             }
         }
 
-        this.hypernyms = new SAP(digraph);
+        graph = new SAP(digraph);
     }
 
 

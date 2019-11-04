@@ -35,8 +35,8 @@ public class SAP {
         if (!validateIndices(v) || !validateIndices(w)) throw new IllegalArgumentException();
 
         int minDistance = Integer.MAX_VALUE;
-        for (Integer vx : v) {
-            for (Integer wx : w) {
+        for (int vx : v) {
+            for (int wx : w) {
                 int distance = new ShortestCommonAncestor(vx, wx).distance;
                 if (distance < minDistance) minDistance = distance;
             }
@@ -53,8 +53,8 @@ public class SAP {
 
         int minDistance = Integer.MAX_VALUE;
         int shortestPath = -1;
-        for (Integer vx : v) {
-            for (Integer wx : w) {
+        for (int vx : v) {
+            for (int wx : w) {
                 ShortestCommonAncestor sca = new ShortestCommonAncestor(vx, wx);
                 int distance = sca.distance;
                 if (distance < minDistance) {
@@ -68,11 +68,11 @@ public class SAP {
     }
 
     private boolean validIndex(int i) {
-        return (0 <= i && i < digraph.V());
+        return 0 <= i && i < digraph.V();
     }
 
     private boolean validateIndices(Iterable<Integer> indices) {
-        for (Integer i : indices) {
+        for (int i : indices) {
             if (!validIndex(i)) return false;
         }
         return true;
